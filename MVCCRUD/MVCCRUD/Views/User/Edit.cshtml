@@ -1,0 +1,45 @@
+﻿@model MVCCRUD.Models.ViewModels.EditUserViewModel
+
+@{
+    ViewBag.Title = "Editar Usuario";
+}
+
+<h2>@ViewBag.title</h2>
+
+<div class="row">
+    <div class="col-md-12">
+
+        @using (Html.BeginForm("Edit", "User", FormMethod.Post, new { role = "Form", @class = "" }))
+        //para apertura de formulario, utilizando el metodo post
+        {
+            @Html.HiddenFor(d=>d.idUsuario)
+            @Html.AntiForgeryToken() //para que no realizen peticiones externas
+
+            @Html.ValidationMessage("error", new { @class = "text-danger" }) // para validar error
+
+            @Html.LabelFor(d => d.Email) //d => alias
+            @Html.TextBoxFor(d => d.Email, new { @class = "form-control" })
+            @Html.ValidationMessage("Email", new { @class = "text-danger" })<br>
+
+            @Html.LabelFor(d => d.Password)
+            @Html.PasswordFor(d => d.Password, new { @class = "form-control" })
+            @Html.ValidationMessage("Password", new { @class = "text-danger" })<br>
+
+            @Html.LabelFor(d => d.ConfirmPassword)
+            @Html.PasswordFor(d => d.ConfirmPassword, new { @class = "form-control" })
+            @Html.ValidationMessage("ConfirmPassword", new { @class = "text-danger" })<br>
+
+            @Html.LabelFor(d => d.edad)
+            @Html.TextBoxFor(d => d.edad, new { @class = "form-control" })
+            @Html.ValidationMessage("Email", new { @class = "text-danger" })<br>
+
+            <div style="text-align:right;">
+                <br>
+                <input type="submit" class="btn btn-success" value="Guardar" />
+            </div>
+        }
+
+    </div>
+
+
+</div>

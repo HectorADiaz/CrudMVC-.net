@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="cursomvcModelStoreContainer" CdmEntityContainer="cursomvcEntities">
+    <EntitySetMapping Name="cstate">
+      <EntityTypeMapping TypeName="cursomvcModel.cstate">
+        <MappingFragment StoreEntitySet="cstate">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="idstatus" ColumnName="idstatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuario">
+      <EntityTypeMapping TypeName="cursomvcModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="edad" ColumnName="edad" />
+          <ScalarProperty Name="idStatus" ColumnName="idStatus" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="idUser" ColumnName="idUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
